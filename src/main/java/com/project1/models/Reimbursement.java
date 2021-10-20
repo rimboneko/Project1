@@ -1,15 +1,14 @@
 package com.project1.models;
 
 import java.io.Serializable;
-import java.time.LocalDate;
 
 public class Reimbursement implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	private int reimb_id;
 	private double amount;
-	private LocalDate submitted;
-	private LocalDate resolved;
+	private String submitted;
+	private String resolved;
 	private String description;
 	private boolean receipt;
 	private int author_id;
@@ -17,7 +16,7 @@ public class Reimbursement implements Serializable {
 	private int status_id;
 	private int type_id;
 	
-	public Reimbursement(int reimb_id, double amount, LocalDate submitted, LocalDate resolved, String description,
+	public Reimbursement(int reimb_id, double amount, String submitted, String resolved, String description,
 			boolean receipt, int author_id, int resolver_id, int status_id, int type_id) {
 		super();
 		this.reimb_id = reimb_id;
@@ -32,7 +31,7 @@ public class Reimbursement implements Serializable {
 		this.type_id = type_id;
 	}
 
-	public Reimbursement(double amount, LocalDate submitted, LocalDate resolved, String description, boolean receipt,
+	public Reimbursement(double amount, String submitted, String resolved, String description, boolean receipt,
 			int author_id, int resolver_id, int status_id, int type_id) {
 		super();
 		this.amount = amount;
@@ -62,19 +61,19 @@ public class Reimbursement implements Serializable {
 		this.amount = amount;
 	}
 
-	public LocalDate getSubmitted() {
+	public String getSubmitted() {
 		return submitted;
 	}
 
-	public void setSubmitted(LocalDate submitted) {
+	public void setSubmitted(String submitted) {
 		this.submitted = submitted;
 	}
 
-	public LocalDate getResolved() {
+	public String getResolved() {
 		return resolved;
 	}
 
-	public void setResolved(LocalDate resolved) {
+	public void setResolved(String resolved) {
 		this.resolved = resolved;
 	}
 
