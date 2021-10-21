@@ -13,6 +13,12 @@ public class User implements Serializable {
 	private String email;
 	private int role_id;
 	
+	
+	
+	public User() {
+		super();
+	}
+
 	public User(int user_id, String username, String password, String first_name, String last_name, String email,
 			int role_id) {
 		super();

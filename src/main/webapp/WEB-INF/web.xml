@@ -11,11 +11,12 @@
   </welcome-file-list>
   
   <servlet>
-  	<servlet-name>SimpleTextServlet</servlet-name>
-  	<servlet-class>com.example.textserv.TextServlet</servlet-class>
+  	<servlet-name>MasterServlet</servlet-name>
+  	<servlet-class>com.project1.servlets.MasterServlet</servlet-class>
+  	<load-on-startup>1</load-on-startup>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>SimpleTextServlet</servlet-name>
-  	<url-pattern>/text</url-pattern>
+  	<servlet-name>MasterServlet</servlet-name>
+  	<url-pattern>/api/*</url-pattern>
   </servlet-mapping>
 </web-app>
