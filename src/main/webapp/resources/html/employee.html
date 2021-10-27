@@ -2,10 +2,36 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Employee</title>
+<title>Employee page</title>
+<link rel="stylesheet" href="../css/employee.css">
 </head>
 <body>
 
-	<h1>Employee</h1>
+	<!-- Tab links -->
+	<div class="tab">
+  		<button class="tablinks">My account information</button>
+  		<button class="tablinks">Update account information</button>
+  		<button class="tablinks">Submit a reimbursement request</button>
+  		<button class="tablinks">Pending reimbursement requests</button>
+  		<button class="tablinks">Resolved reimbursement requests</button>
+	</div>
+
+	<!-- Tab content -->
+	<div id="London" class="tabcontent">
+  		<h3>London</h3>
+  		<p>London is the capital city of England.</p>
+	</div>
+
+	<div id="Paris" class="tabcontent">
+  		<h3>Paris</h3>
+  		<p>Paris is the capital of France.</p>
+	</div>
+
+	<div id="Tokyo" class="tabcontent">
+  		<h3>Tokyo</h3>
+  		<p>Tokyo is the capital of Japan.</p>
+	</div>
+
+	<script src="../js/employee.js"></script>
 </body>
 </html>

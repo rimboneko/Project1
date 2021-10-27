@@ -6,13 +6,14 @@ import com.project1.dao.UserDao;
 import com.project1.dao.UserDaoDB;
 import com.project1.exceptions.InvalidCredentialsException;
 import com.project1.exceptions.UserDoesNotExistException;
+import com.project1.exceptions.UsernameAlreadyExistsException;
 import com.project1.models.Reimbursement;
 import com.project1.models.User;
 import com.project1.services.UserService;
 
 public class test {
 
-	public static void main(String[] args) throws SQLException, UserDoesNotExistException, InvalidCredentialsException {
+	public static void main(String[] args) throws SQLException, UserDoesNotExistException, InvalidCredentialsException, UsernameAlreadyExistsException {
 		// TODO Auto-generated method stub
 
 		//User u= new User("mugisha","password","joelle","mugisha","joelle@mail.com",2);
@@ -25,8 +26,9 @@ public class test {
 		//udao.createUser(u);
 		//List<User> test = udao.getAllEmployees();
 		//System.out.println(test);
-		User test = userv.signIn("mboneko", "password");
-		System.out.println(test);
+		//User test = userv.signIn("mboneko", "password");
+		//System.out.println(test);
+		userv.register("smith","password","smith","jones","smith@mail.com",2);
 	}
 
 }

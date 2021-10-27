@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.project1.controllers.LoginController;
+import com.project1.controllers.RegisterController;
 import com.fasterxml.jackson.core.JsonProcessingException;
 
 public class Dispatcher {
@@ -16,10 +17,10 @@ public class Dispatcher {
 			case "/project1/api/login":
 				LoginController.login(req, res);
 				break;
-			/*case "/SocialHubWeekFour/api/posts":
-				PostController.handlePosts(req, res);
+			case "/project1/api/register":
+				RegisterController.register(req, res);
 				break;
-			case "/SocialHubWeekFour/api/session":
+			/*case "/SocialHubWeekFour/api/session":
 				SessionController.getSession(req, res);
 				*/
 		}

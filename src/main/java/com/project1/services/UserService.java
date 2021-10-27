@@ -1,8 +1,11 @@
 package com.project1.services;
 
+import java.sql.SQLException;
+
 import com.project1.dao.UserDao;
 import com.project1.exceptions.InvalidCredentialsException;
 import com.project1.exceptions.UserDoesNotExistException;
+import com.project1.exceptions.UsernameAlreadyExistsException;
 import com.project1.models.User;
 
 public class UserService {
@@ -12,22 +15,22 @@ private UserDao uDao;
 	public UserService(UserDao u) {
 		this.uDao = u;
 	}
-	/*
-	public User signUp(String first, String last, String username, String password, String email, String type) throws UsernameAlreadyExistsException {
+	
+	public void register(String username, String password, String first, String last, String email, int role) throws UsernameAlreadyExistsException {
 		
-		User u = new User(first, last, username, password, email, type);
+		User u = new User(username, password, first, last, email, role);
 		
 		try {
 			uDao.createUser(u);
-			Logging.logger.info("New user was registered");
+			//Logging.logger.info("New user was registered");
 		} catch (SQLException e) {
-			Logging.logger.info("Username created that already exists in the database");
+			//Logging.logger.info("Username created that already exists in the database");
 			throw new UsernameAlreadyExistsException();
 		}
 		
-		return u;
+		//return u;
 	}
-	*/
+	
 	public User signIn(String username, String password) throws UserDoesNotExistException, InvalidCredentialsException{
 		
 	

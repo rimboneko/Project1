@@ -20,8 +20,10 @@ async function login(e){
 			},
 			body: JSON.stringify(user)
 		});
-		let res = await req.json();
-		location.href = '../html/employee.html';
+		
+		let res= await req.json();
+		if(res == 1) location.href = '../html/manager.html';
+		if(res == 2) location.href = '../html/employee.html';
 	} catch(e){
 		alert('Username or password was incorrect!');
 		return;

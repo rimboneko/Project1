@@ -2,19 +2,24 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>ERS</title>
+<title>Login Page</title>
+<link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
-
 	<h1>Expense Reimbursement System</h1>
-	<h3>Please Sign In</h3>
-	
-	<form id="login">
-		<label for="username">Username: </label>
-		<input id="username" type="text" name="username" required/>
-		<label for="password">Password: </label>
-		<input id="password" type="password" name="password" required/>
-		<input type="submit" value="Login"/>
+	<form id="login" class="for">
+		<div class="container">
+			<h3>Please Enter your Username and Password</h3>
+			<hr>
+			<label for="username"><b>Username</b></label><br>
+			<input id="username" type="text" name="username" required/><br>
+			
+			<label for="password"><b>Password</b></label><br>
+			<input id="password" type="password" name="password" required/><br>
+			
+			<hr>
+			<button type="submit" class="loginbtn">Login</button>
+		</div>
 	</form>
 	
 	<script src="../js/login.js"></script>
