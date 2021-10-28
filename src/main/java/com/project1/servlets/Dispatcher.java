@@ -18,11 +18,11 @@ public class Dispatcher {
 				LoginController.login(req, res);
 				break;
 			case "/project1/api/register":
-				RegisterController.register(req, res);
+				LoginController.register(req, res);
 				break;
-			/*case "/SocialHubWeekFour/api/session":
-				SessionController.getSession(req, res);
-				*/
+			case "/project1/api/userinf":
+				LoginController.userinf(req, res);;
+				
 		}
 	}
 	
