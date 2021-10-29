@@ -1,9 +1,15 @@
 @charset "ISO-8859-1";
-* {box-sizing: border-box}
+* {
+	box-sizing: border-box;
+}
 
 .for {
   border: 3px solid #f1f1f1;
-  
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  margin-left: 400px;
+  margin-right: 400px;
     }
 
 /* Add padding to containers */
@@ -13,7 +19,7 @@
 
 /* Full-width input fields */
 input[type=text], input[type=password] {
-  width: 25%;
+  width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
   display: inline-block;
@@ -53,6 +59,12 @@ h1 {
   	text-align: center;
   	border: none;
   	margin-top: 40px;
+}
+
+.reg {
+  background-color: #f1f1f1;
+  text-align: center;
+  margin-top: 280px;
 }
 
 

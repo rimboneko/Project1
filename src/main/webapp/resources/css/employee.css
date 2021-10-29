@@ -35,3 +35,10 @@
   border: 1px solid #ccc;
   border-top: none;
 }
+
+h1 {
+	background-color: skyblue;
+  	text-align: center;
+  	border: none;
+  	margin-top: 40px;
+}

@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.project1.controllers.LoginController;
-import com.project1.controllers.RegisterController;
+import com.project1.controllers.ReimbursementController;
 import com.fasterxml.jackson.core.JsonProcessingException;
 
 public class Dispatcher {
@@ -21,7 +21,11 @@ public class Dispatcher {
 				LoginController.register(req, res);
 				break;
 			case "/project1/api/userinf":
-				LoginController.userinf(req, res);;
+				LoginController.userinf(req, res);
+				break;
+			case "/project1/api/createreimb":
+				ReimbursementController.createreimb(req, res);
+				break;
 				
 		}
 	}

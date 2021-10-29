@@ -9,10 +9,18 @@ import com.project1.models.User;
 
 public interface ReimbursementDao {
 	
-	List<Reimbursement> viewEmpReimb(User u);
+	List<Reimbursement> viewEmpReimb(String username);
 	
-	List<Reimbursement> viewPendReimb(ReimbursementStatus status);
+	List<Reimbursement> viewPendReimb();
+	
+	List<Reimbursement> viewPendReimb(String username);
+	
+	List<Reimbursement> viewResReimb();
+	
+	List<Reimbursement> viewResReimb(String username);
 	
 	void createReimb(Reimbursement r) throws SQLException;
+	
+	void changeStatus(int reim_id, int status_id) throws SQLException;
 	
  }
