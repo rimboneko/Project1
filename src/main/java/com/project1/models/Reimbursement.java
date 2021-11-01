@@ -4,6 +4,10 @@ import java.io.Serializable;
 
 public class Reimbursement implements Serializable {
 
+	public Reimbursement() {
+		super();
+	}
+
 	private static final long serialVersionUID = 1L;
 	private int reimb_id;
 	private double amount;

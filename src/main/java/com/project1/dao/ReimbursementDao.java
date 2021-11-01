@@ -21,6 +21,9 @@ public interface ReimbursementDao {
 	
 	void createReimb(Reimbursement r) throws SQLException;
 	
-	void changeStatus(int reim_id, int status_id) throws SQLException;
+	void changeStatus(int reim_id, String resolved, int resolver, int status_id) throws SQLException;
+	
+	Reimbursement getReimb(int reimb_id);
+	
 	
  }

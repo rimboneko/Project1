@@ -6,36 +6,60 @@
 <link rel="stylesheet" href="../css/employee.css">
 </head>
 <body>
-
-	<!-- Tab links -->
+<!-- Tab links -->
 	<div  class="tab">
-  		<button class="tablinks" onclick="getAccInf(event)">My account information</button>
+		<button class="tablinks" onclick="openTab(event, 'home')">Home</button>
+  		<button class="tablinks" onclick="openTab(event, 'accinfo')">My account information</button>
   		<button class="tablinks">Update account information</button>
-  		<button class="tablinks" onclick="reimbForm(event)">Submit a reimbursement request</button>
-  		<button class="tablinks">Pending reimbursement requests</button>
-  		<button class="tablinks">Resolved reimbursement requests</button>
+  		<button class="tablinks" onclick="openTab(event, 'createreimb')">Submit a reimbursement request</button>
+  		<button class="tablinks" onclick="openTab(event, 'pendreimb')">Pending reimbursement requests</button>
+  		<button class="tablinks" onclick="openTab(event, 'resreimb')">Resolved reimbursement requests</button>
+  		<button class="tablinks" onclick="logout()">Logout</button>
 	</div>
 	
-	<div id="test">
-	
-	</div>
-
 	<!-- Tab content -->
-	<div id="London" class="tabcontent">
-  		<h3>London</h3>
-  		<p>London is the capital city of England.</p>
+	<div id="home" class="tabcontent">
+		<h1>Welcome</h1>
+		
+  		<div class="float-container">
+
+  			<div class="float-child">
+    			<div class="green">For User Information click on My account information Tab</div>
+  			</div>
+  
+  			<div class="float-child">
+    			<div class="blue">To submit a new Reimbursement Request click on Submit a reimbursement request Tab</div>
+  			</div>
+  
+  			<div class="float-child">
+    			<div class="green">To view all the pending reimbursement requests click on Pending reimbursement requests Tab</div>
+  			</div>
+  
+  			<div class="float-child">
+    			<div class="green">To view all the resolved reimbursement requests click on Resolved reimbursement requests</div>
+  			</div>
+  
+		</div>
+  		
 	</div>
 
-	<div id="Paris" class="tabcontent">
-  		<h3>Paris</h3>
-  		<p>Paris is the capital of France.</p>
+	<div id="accinfo" class="tabcontent">
+  		<h3>Account info</h3>
 	</div>
 
-	<div id="Tokyo" class="tabcontent">
-  		<h3>Tokyo</h3>
-  		<p>Tokyo is the capital of Japan.</p>
+	<div id="createreimb" class="tabcontent">
+  		<h3>Create reimbursement</h3>
+	</div>
+
+	<div id="pendreimb" class="tabcontent">
+  		<h3>Pending reimb</h3>
+	</div>
+	
+	<div id="resreimb" class="tabcontent">
+  		<h3>Resolv reimb</h3>
 	</div>
 
 	<script src="../js/employee.js"></script>
+	
 </body>
 </html>

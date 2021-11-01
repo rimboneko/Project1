@@ -2,9 +2,47 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Manager page</title>
+<link rel="stylesheet" href="../css/manager.css">
 </head>
 <body>
+<!-- Tab links -->
+	<div  class="tab">
+  		<button class="tablinks" onclick="openTab(event, 'allpendreimb')">Pending reimbursement requests</button>
+  		<button class="tablinks" onclick="openTab(event, 'allresreimb')">Resolved reimbursement requests</button>
+  		<button class="tablinks" onclick="openTab(event, 'empreimb')">Employee reimbursement requests</button>
+  		<button class="tablinks" onclick="openTab(event, 'allemp')">Employees</button>
+  		<button class="tablinks" onclick="openTab(event, 'updatestatus')">Approve/Deny reimbursement request</button>
+  		<button class="tablinks" onclick="logout()">Logout</button>
+  		
+	</div>
+	
 
+	<!-- Tab content -->
+	<div id="allpendreimb" class="tabcontent">
+  		<h3>Pending</h3>
+	</div>
+
+	<div id="allresreimb" class="tabcontent">
+  		<h3>Resolved</h3>
+	</div>
+
+	<div id="empreimb" class="tabcontent">
+  		<h3>Enter the employee's username</h3>
+  		<input type="text" name="empreq" class="reqid" id="empreq" placeholder="Username" required>
+  		<button type="submit" class="enter" onclick="getEmpreq(event)">Enter</button>
+	</div>
+	
+	<div id="allemp" class="tabcontent">
+  		<h3>Employees</h3>
+	</div>
+	
+	<div id="updatestatus" class="tabcontent">
+  		<h3>Enter the reimbursement request ID</h3>
+  		<input type="text" name="reqid" class="reqid" id="reqid" placeholder="Enter the ID" required>
+  		<button type="submit" class="enter" onclick="getReq(event)">Enter</button>
+	</div>
+	
+	<script src="../js/manager.js"></script>
 </body>
 </html>

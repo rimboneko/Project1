@@ -33,8 +33,9 @@ public class test {
 		//userv.register("smith","password","smith","jones","smith@mail.com",2);
 		//List<Reimbursement> test= rdao.viewResReimb("mboneko");
 		//System.out.println(test);
-		//rdao.changeStatus(3, 1);
-		rServ.subReimb(200, "2021-10-21", "-", "good", false, 3, 1, 1, 4);
+		//rdao.changeStatus(14, "2021-01-24", 1, 2);
+		//rServ.subReimb(200, "2021-10-21", "-", "good", false, 3, 1, 1, 4);
+		System.out.println(rdao.getReimb(1));
 	}
 
 }

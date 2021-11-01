@@ -170,15 +170,50 @@ public class ReimbursementDaoDB implements ReimbursementDao {
 	}
 
 	@Override
-	public void changeStatus(int reim_id, int status_id) throws SQLException {
+	public void changeStatus(int reim_id, String resolved, int resolver, int status_id) throws SQLException {
 		
 		Connection con = conUtil.getConnection();
-		String sql = "UPDATE reimbursement SET reimb_status_id = ?" + "WHERE reimb_id = ?";
+		String sql = "UPDATE reimbursement SET reimb_resolved = ?, reimb_resolver = ?, reimb_status_id = ?" + "WHERE reimb_id = ?";
 		PreparedStatement ps = con.prepareStatement(sql);
-		ps.setInt(1, status_id);
-		ps.setInt(2, reim_id);
+		ps.setString(1, resolved);
+		ps.setInt(2, resolver);
+		ps.setInt(3, status_id);
+		ps.setInt(4, reim_id);
 		ps.execute();	
 	}
-	
+
+	@Override
+	public Reimbursement getReimb(int reimb_id) {
+		
+		Reimbursement reimb = new Reimbursement();
+		
+		try {
+			Connection con = conUtil.getConnection();
+			
+			String sql = "SELECT * FROM reimbursement WHERE reimb_id = '" + reimb_id + "'";
+			
+			Statement s = con.createStatement();
+			ResultSet rs = s.executeQuery(sql);
+			
+			while(rs.next()) {
+				reimb.setReimb_id(rs.getInt(1));
+				reimb.setAmount(rs.getDouble(2));
+				reimb.setSubmitted(rs.getString(3));
+				reimb.setResolved(rs.getString(4));
+				reimb.setDescription(rs.getString(5));
+				reimb.setReceipt(rs.getBoolean(6));
+				reimb.setAuthor_id(rs.getInt(7));
+				reimb.setResolver_id(rs.getInt(8));
+				reimb.setStatus_id(rs.getInt(9));
+				reimb.setType_id(rs.getInt(10));
+			}
+			
+			return reimb;
+			
+		} catch(SQLException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
 
 }

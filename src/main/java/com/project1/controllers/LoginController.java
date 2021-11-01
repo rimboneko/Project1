@@ -2,6 +2,7 @@ package com.project1.controllers;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -42,7 +43,7 @@ public class LoginController {
 			accInf = u;
 			System.out.println(u);
 			//We will keep track of if a user is signed in by storing their id in the session
-			//req.getSession().setAttribute("id", u.getId());
+			req.getSession().setAttribute("id", u.getUser_id());
 			res.setStatus(200);
 			res.getWriter().write(new ObjectMapper().writeValueAsString(u.getRole_id()));
 		} catch(Exception e) {
@@ -75,8 +76,6 @@ public class LoginController {
 		try {
 			
 			uServ.register(username, password, firstname, lastname, email, role);
-			//We will keep track of if a user is signed in by storing their id in the session
-			//req.getSession().setAttribute("id", u.getId());
 			res.setStatus(200);
 			res.getWriter().write(new ObjectMapper().writeValueAsString("Successfully registered"));
 		} catch(Exception e) {
@@ -89,6 +88,12 @@ public class LoginController {
 	public static void userinf(HttpServletRequest req, HttpServletResponse res) throws JsonProcessingException, IOException {
 		
 		res.getWriter().write(new ObjectMapper().writeValueAsString(accInf));
+	}
+	
+	public static void viewallemp(HttpServletRequest req, HttpServletResponse res) throws JsonProcessingException, IOException {
+		
+		List<User> employees = uServ.getAllEmployees();
+		res.getWriter().write(new ObjectMapper().writeValueAsString(employees));
 	}
 	
 }
