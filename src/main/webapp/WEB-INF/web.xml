@@ -19,4 +19,11 @@
   	<servlet-name>MasterServlet</servlet-name>
   	<url-pattern>/api/*</url-pattern>
   </servlet-mapping>
+  
+  <display-name>Log4jWebDemo1</display-name>
+     
+    <context-param>
+        <param-name>log4j-config-location</param-name>
+        <param-value>WEB-INF/log4j.properties</param-value>
+    </context-param>
 </web-app>

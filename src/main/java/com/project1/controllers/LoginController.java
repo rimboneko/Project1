@@ -2,6 +2,7 @@ package com.project1.controllers;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.lang.System.Logger;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -9,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.project1.dao.UserDao;
 import com.project1.dao.UserDaoDB;
+import com.project1.logging.Logging;
 import com.project1.models.User;
 import com.project1.services.UserService;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -42,6 +44,7 @@ public class LoginController {
 			User u = uServ.signIn(username, password);
 			accInf = u;
 			System.out.println(u);
+			Logging.logger.info("User was logged in");
 			//We will keep track of if a user is signed in by storing their id in the session
 			req.getSession().setAttribute("id", u.getUser_id());
 			res.setStatus(200);

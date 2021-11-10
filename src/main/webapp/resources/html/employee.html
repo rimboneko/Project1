@@ -10,7 +10,6 @@
 	<div  class="tab">
 		<button class="tablinks" onclick="openTab(event, 'home')">Home</button>
   		<button class="tablinks" onclick="openTab(event, 'accinfo')">My account information</button>
-  		<button class="tablinks">Update account information</button>
   		<button class="tablinks" onclick="openTab(event, 'createreimb')">Submit a reimbursement request</button>
   		<button class="tablinks" onclick="openTab(event, 'pendreimb')">Pending reimbursement requests</button>
   		<button class="tablinks" onclick="openTab(event, 'resreimb')">Resolved reimbursement requests</button>
@@ -19,44 +18,33 @@
 	
 	<!-- Tab content -->
 	<div id="home" class="tabcontent">
-		<h1>Welcome</h1>
-		
-  		<div class="float-container">
-
-  			<div class="float-child">
-    			<div class="green">For User Information click on My account information Tab</div>
-  			</div>
-  
-  			<div class="float-child">
-    			<div class="blue">To submit a new Reimbursement Request click on Submit a reimbursement request Tab</div>
-  			</div>
-  
-  			<div class="float-child">
-    			<div class="green">To view all the pending reimbursement requests click on Pending reimbursement requests Tab</div>
-  			</div>
-  
-  			<div class="float-child">
-    			<div class="green">To view all the resolved reimbursement requests click on Resolved reimbursement requests</div>
-  			</div>
-  
-		</div>
-  		
+		<hr>
+		<h1 id="home">Welcome</h1>
+		<hr>
+    	<div class="home">For User Information click on <span style="color:skyblue;font-weight:bold">My account information Tab</span></div>
+  		<hr>		
+    	<div class="home">To submit a new Reimbursement Request click on <span style="color:skyblue;font-weight:bold">Submit a reimbursement request Tab</span></div>
+  		<hr>		
+    	<div class="home">To view all the pending reimbursement requests click on <span style="color:skyblue;font-weight:bold">Pending reimbursement requests Tab</span></div>
+  		<hr>		
+    	<div class="home">To view all the resolved reimbursement requests click on <span style="color:skyblue;font-weight:bold">Resolved reimbursement requests</span></div>
+  			
 	</div>
 
 	<div id="accinfo" class="tabcontent">
-  		<h3>Account info</h3>
+  		<h1>Account info</h1>
 	</div>
 
 	<div id="createreimb" class="tabcontent">
-  		<h3>Create reimbursement</h3>
+  		<h1>Create new reimbursement request</h1>
 	</div>
 
 	<div id="pendreimb" class="tabcontent">
-  		<h3>Pending reimb</h3>
+  		<h1>Pending reimbursement request</h1>
 	</div>
 	
 	<div id="resreimb" class="tabcontent">
-  		<h3>Resolv reimb</h3>
+  		<h1>Resolved reimbursement request</h1>
 	</div>
 
 	<script src="../js/employee.js"></script>

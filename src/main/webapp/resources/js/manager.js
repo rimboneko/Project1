@@ -80,7 +80,8 @@ function openTab(evt, tabName) {
   evt.currentTarget.className += " active";
   
   switch(tabName) {
-  
+  case"home":
+  	break;
   case "allpendreimb":
   	getAllpend();
   	break;

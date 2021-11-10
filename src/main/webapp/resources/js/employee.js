@@ -1,3 +1,4 @@
+
 var user_id;
 var username ;
 var info = true;
@@ -292,4 +293,9 @@ function viewreq(data, tab){
 		container.append(table);
 	}
 
+}
+
+function addusername() {
+	
+	document.getElementById('home').innerText = document.getElementById('home').value + ' ' + username;
 }

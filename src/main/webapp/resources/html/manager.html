@@ -8,6 +8,7 @@
 <body>
 <!-- Tab links -->
 	<div  class="tab">
+		<button class="tablinks" onclick="openTab(event, 'home')" id="defaultOpen">Home</button>
   		<button class="tablinks" onclick="openTab(event, 'allpendreimb')">Pending reimbursement requests</button>
   		<button class="tablinks" onclick="openTab(event, 'allresreimb')">Resolved reimbursement requests</button>
   		<button class="tablinks" onclick="openTab(event, 'empreimb')">Employee reimbursement requests</button>
@@ -19,12 +20,27 @@
 	
 
 	<!-- Tab content -->
+	<div id="home" class="tabcontent">
+		<hr>
+		<h1 id="home">Welcome</h1>
+		<hr>
+    	<div class="home">To view all pending reimbursement requests click on <span style="color:skyblue;font-weight:bold">Pending reimbursement requests Tab</span></div>
+  		<hr>		
+    	<div class="home">To view all resolved reimbursement requests click on <span style="color:skyblue;font-weight:bold">Resolved reimbursement requests Tab</span></div>
+  		<hr>		
+    	<div class="home">To view all reimbursement requests for an employee click on <span style="color:skyblue;font-weight:bold">Employee reimbursement requests Tab</span></div>
+  		<hr>		
+    	<div class="home">To view all employees <span style="color:skyblue;font-weight:bold">Employees</span></div>
+  		<hr>		
+    	<div class="home">To Approve or Deny a reimbursement request click on <span style="color:skyblue;font-weight:bold">Approve/Deny reimbursement request</span></div>		
+	</div>
+	
 	<div id="allpendreimb" class="tabcontent">
-  		<h3>Pending</h3>
+  		<h1>Pending reimbursement requests</h1>
 	</div>
 
 	<div id="allresreimb" class="tabcontent">
-  		<h3>Resolved</h3>
+  		<h1>Resolved reimbursement requests</h1>
 	</div>
 
 	<div id="empreimb" class="tabcontent">
